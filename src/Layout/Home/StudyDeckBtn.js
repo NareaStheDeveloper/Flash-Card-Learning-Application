@@ -5,13 +5,13 @@ import { useHistory } from "react-router-dom";
 function StudyDeckButton({ deck }) {
   const history = useHistory();
   return (
-    <button
+    <div
       type="button"
-      className="btn btn-primary mr-2"
+      className="nav-button btn btn-info mr-2"
       onClick={() => history.push(`/decks/${deck.id}/study`)}
     >
-      <span className="oi oi-book" /> Study
-    </button>
+      <span className="oi oi-book" /> &nbsp;&nbsp;Study
+    </div>
   );
 }
 

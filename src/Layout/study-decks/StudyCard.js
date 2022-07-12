@@ -5,6 +5,7 @@ import FlipButton from "./FlipBtn";
 import NextButton from "./NextBtn";
 import AddCardsButton from "./AddCardsBtn";
 
+
 function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
   const [cardCount, setCardCount] = useState(1);
   const [isFrontOfCard, setIsFrontOfCard] = useState(true);
@@ -12,6 +13,8 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
   const history = useHistory();
   const { url } = useRouteMatch();
 
+  
+  
   // Function to handle clicks of the Next button
   const NextCardHandler = () => {
     // Keeping track of which card in the deck the user is currently viewing
@@ -37,6 +40,7 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
     }
   };
 
+
   // If there are less than 3 cards in a deck, the user will be prompted to add cards to the deck
   if (cards.length < 3) {
     return (
@@ -54,27 +58,31 @@ function StudyCard({ cards, currentCard, setCurrentCard, deckId }) {
   // Renders the front of the card and the "Flip" button if isFrontOfCard is true
   if (isFrontOfCard) {
     return (
-      <div className="card">
+      <div className="card pt-4 pl-3">
         <div className="card-body">
-          <h5 className="card-title">
+          <h5 className="card-body-front pb-2">
             Card {cardCount} of {cards.length}
           </h5>
-          <p className="card-text">{currentCard.front}</p>
-          <FlipButton setIsFrontOfCard={setIsFrontOfCard} />
+          <p className="card-info">{currentCard.front}</p>
+          <div className="row justify-content-center mt-5">
+            <FlipButton setIsFrontOfCard={setIsFrontOfCard} />
+          </div>
         </div>
       </div>
     );
   }
   // Renders the back of the card and the "Flip" and "Next" buttons if isFrontOfCard is false
   return (
-    <div clasNames="card">
+    <div className="card pt-4 pl-3">
       <div className="card-body">
-        <h5 className="card-title">
+        <h5 className="card-body-front pb-2">
           Card {cardCount} of {cards.length}
         </h5>
-        <p className="card-text">{currentCard.back}</p>
-        <FlipButton setIsFrontOfCard={setIsFrontOfCard} />
-        <NextButton NextCardHandler={NextCardHandler} />
+        <p className="card-info">{currentCard.back}</p>
+        <div className="row justify-content-center mt-5">
+          <FlipButton setIsFrontOfCard={setIsFrontOfCard} />
+          <NextButton NextCardHandler={NextCardHandler} />
+        </div>
       </div>
     </div>
   );

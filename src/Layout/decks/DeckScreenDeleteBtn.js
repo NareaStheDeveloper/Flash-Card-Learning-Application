@@ -1,6 +1,9 @@
+
+
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { deleteDeck } from "../../utils/api/index";
+import "../../Layout/Layout.css"
 
 function DeckScreenDeleteDeckButton({ deckId }) {
   const history = useHistory();
@@ -17,7 +20,7 @@ function DeckScreenDeleteDeckButton({ deckId }) {
   };
 
   return (
-    <button type="button" clasNames="btn btn-danger" onClick={handleTrashClick}>
+    <button type="button" className="nav-button btn btn-danger" onClick={handleTrashClick}>
       <span className="oi oi-trash" />
     </button>
   );

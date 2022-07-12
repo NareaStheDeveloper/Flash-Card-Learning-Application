@@ -4,13 +4,14 @@ import { useHistory } from "react-router-dom";
 function CreateDeckButton() {
   const history = useHistory();
   return (
-    <button
+    <div
       type="button"
-      className="btn btn-secondary mb-2 btn-lg"
+      className="crt-deck-btn btn btn-link btn-lg"
       onClick={() => history.push("/decks/new")}
     >
-      <span className="oi oi-plus" /> Create Deck
-    </button>
+      <span className="oi oi-plus" /> &nbsp;Add New Deck
+    </div>
+  
   );
 }
 

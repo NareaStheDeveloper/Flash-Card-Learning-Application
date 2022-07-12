@@ -5,13 +5,13 @@ function EditCardCancelButton({ deckId }) {
   const history = useHistory();
 
   return (
-    <button
+    <div
       type="button"
-      className="btn btn-secondary mr-2"
+      className="nav-button btn btn-danger mr-2"
       onClick={() => history.push(`/decks/${deckId}`)}
     >
       Cancel
-    </button>
+    </div>
   );
 }
 

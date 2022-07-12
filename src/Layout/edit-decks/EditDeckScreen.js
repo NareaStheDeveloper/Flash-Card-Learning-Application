@@ -42,12 +42,12 @@ function EditDeckScreen() {
   return (
     <div>
       <EditDeckScreenBreadcrumbNavBar deckName={deckName} deckId={deckId} />
-
+      <div className="study-text mt-5 mb-5">
       <h1>Edit Deck</h1>
-
+</div>
       <form onSubmit={handleEditDeckSubmit}>
         <div className="form-group">
-          <label htmlFor="deckName">Name</label>
+          <div className="edit-text"><label htmlFor="deckName">Deck Name</label></div>
           <input
             id="deckName"
             type="text"
@@ -58,7 +58,7 @@ function EditDeckScreen() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="deckDescription">Description</label>
+          <div className="edit-text"><label htmlFor="deckDescription">Description</label></div>
           <textarea
             id="deckDescription"
             name="deckDescription"
@@ -69,7 +69,7 @@ function EditDeckScreen() {
           />
         </div>
         <EditDeckCancelButton deckId={deckId} />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="nav-button btn btn-info">
           Submit
         </button>
       </form>

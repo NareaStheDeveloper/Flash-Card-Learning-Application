@@ -2,11 +2,15 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 function StudyScreenBreadcrumbNavBar({ deckId, deck }) {
-  return (
+  return ( 
+    
     <nav aria-label="breadcrumb">
-      <ol className="breadcrumb">
+      <div className="study-nav text-info">
+
+      <ol className="breadcrumb mt-5">
+     
         <li className="breadcrumb-item">
-          <Link to="/"><span className="oi oi-home"/> Home</Link>
+          <Link to="/"><span className=" oi oi-home"/> Home</Link>
         </li>
         <li className="breadcrumb-item">
           <Link to={`/decks/${deckId}`}>{deck.name}</Link>
@@ -14,8 +18,11 @@ function StudyScreenBreadcrumbNavBar({ deckId, deck }) {
         <li className="breadcrumb-item active" aria-current="page">
           Study
         </li>
+       
       </ol>
+     </div>
     </nav>
+   
   );
 }
 

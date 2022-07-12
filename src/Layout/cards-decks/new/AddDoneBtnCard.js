@@ -7,7 +7,7 @@ function AddCardDoneButton({ deckId }) {
   return (
     <button
       type="button"
-      className="btn btn-secondary mr-2"
+      className="nav-button btn btn-info mr-2"
       onClick={() => history.push(`/decks/${deckId}`)}
     >
       Done

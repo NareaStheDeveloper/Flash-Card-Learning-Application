@@ -29,11 +29,11 @@ function CreateDeckScreen() {
     <div>
       <CreateDeckBreadcrumbNavBar />
 
-      <h1>Create Deck</h1>
+      <div className="study-text mt-5 mb-5"> <h1>Create Deck</h1></div>
 
       <form onSubmit={handleCreateDeckSubmit}>
         <div className="form-group">
-          <label htmlFor="deckName">Name</label>
+          <div className="edit-text"><label htmlFor="deckName">Card Name</label></div>
           <input
             id="deckName"
             type="text"
@@ -45,7 +45,7 @@ function CreateDeckScreen() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="deckDescription">Description</label>
+        <div className="edit-text"><label htmlFor="deckDescription">Description</label></div>
           <textarea
             id="deckDescription"
             name="deckDescription"
@@ -57,7 +57,7 @@ function CreateDeckScreen() {
           />
         </div>
         <CreateDeckCancelButton />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="nav-button btn btn-primary">
           Submit
         </button>
       </form>

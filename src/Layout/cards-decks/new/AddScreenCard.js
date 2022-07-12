@@ -42,7 +42,7 @@ function AddCardScreen() {
     return (
       <div>
         <AddCardScreenBreadcrumbNavBar deckName={deck.name} deckId={deckId} />
-        <h2>{deck.name}: Add Card</h2>
+       <div className="study-text mt-5 mb-5"> <h2>{deck.name}: Add Card</h2></div>
   
         <form onSubmit={handleAddCardSave}>
           <CardForm
@@ -52,7 +52,7 @@ function AddCardScreen() {
             handleCardBackChange={handleCardBackChange}
           />
           <AddCardDoneButton deckId={deckId} />
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="nav-button btn btn-warning">
             Save
           </button>
         </form>

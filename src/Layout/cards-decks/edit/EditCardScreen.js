@@ -6,6 +6,8 @@ import EditCardScreenBreadcrumbNavBar from "./EditCardScreenBreadCrumbs";
 import CardForm from "../CardForm";
 import EditCardCancelButton from "./EditCardCancelBtn";
 
+import "../../../Layout/Layout.css"
+
 function EditCardScreen() {
   const [deck, setDeck] = useState({});
   const [preExistingCard, setPreExistingCard] = useState({});
@@ -55,7 +57,7 @@ function EditCardScreen() {
         deckId={deckId}
         cardId={cardId}
       />
-      <h1>Edit Card</h1>
+      <div className="study-text mt-5 mb-5"><h1>Edit Card</h1></div>
 
       <form onSubmit={handleEditCardSubmit}>
         <CardForm
@@ -65,7 +67,7 @@ function EditCardScreen() {
           handleCardBackChange={handleCardBackChange}
         />
         <EditCardCancelButton deckId={deckId} />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="nav-button btn btn-info">
           Submit
         </button>
       </form>

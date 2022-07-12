@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function EditDeckScreenBreadcrumbNavBar({ deckName, deckId }) {
   return (
+    <div className="study-nav">
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item">
@@ -18,6 +19,7 @@ function EditDeckScreenBreadcrumbNavBar({ deckName, deckId }) {
         </li>
       </ol>
     </nav>
+    </div>
   );
 }
 

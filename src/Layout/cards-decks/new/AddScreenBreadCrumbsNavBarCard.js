@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 function AddCardScreenBreadcrumbNavBar({ deckName, deckId }) {
   return (
+    <div className="study-nav">
     <nav aria-label="breadcrumb">
       <ol className="breadcrumb">
         <li className="breadcrumb-item">
@@ -16,6 +17,7 @@ function AddCardScreenBreadcrumbNavBar({ deckName, deckId }) {
         </li>
       </ol>
     </nav>
+    </div>
   );
 }
 

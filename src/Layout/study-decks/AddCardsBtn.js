@@ -4,13 +4,13 @@ import { useHistory } from "react-router";
 function AddCardsButton({ deckId }) {
   const history = useHistory();
   return (
-    <button
+    <div
       type="button"
-      className="btn btn-primary"
+      className="nav-button btn btn-primary"
       onClick={() => history.push(`/decks/${deckId}/cards/new`)}
     >
       <span className="oi oi-plus" /> Add Cards
-    </button>
+    </div>
   );
 }
 

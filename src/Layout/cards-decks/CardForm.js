@@ -6,7 +6,7 @@ function CardForm({ cardFront, handleCardFrontChange, cardBack, handleCardBackCh
   return (
     <div>
       <div className="form-group">
-        <label htmlFor="cardFront">Front</label>
+      <div className="edit-text"> <label htmlFor="cardFront">Front</label></div>
         <textarea
           id="cardFront"
           name="cardFront"
@@ -18,7 +18,7 @@ function CardForm({ cardFront, handleCardFrontChange, cardBack, handleCardBackCh
         />
       </div>
       <div className="form-group">
-        <label htmlFor="cardBack">Back</label>
+      <div className="edit-text"> <label htmlFor="cardBack">Back</label> </div>
         <textarea
           id="cardBack"
           name="cardBack"

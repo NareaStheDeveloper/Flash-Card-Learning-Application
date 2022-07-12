@@ -41,6 +41,8 @@ function stripCards(deck) {
  *  If the response is not in the 200 - 399 range the promise is rejected.
  */
 
+
+
 async function fetchJson(url, options, onCancel) {
   try {
     const response = await fetch(url, options);
@@ -217,3 +219,6 @@ export async function deleteCard(cardId, signal) {
   const options = { method: "DELETE", signal };
   return await fetchJson(url, options);
 }
+
+//Flipping
+

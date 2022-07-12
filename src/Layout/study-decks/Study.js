@@ -25,8 +25,9 @@ function Study() {
   return (
     <div>
       <StudyScreenBreadcrumbNavBar deckId={deckId} deck={deck}/>
-      
+      <div className="study-text">
       <h1>Study: {deck.name}</h1>
+      </div>
 
       <StudyCard cards={cards} currentCard={currentCard} setCurrentCard={setCurrentCard} deckId={deckId}/>
     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { deleteDeck } from "../../utils/api/index";
+import "../../Layout/Layout.css"
 
 function DeleteDeckButton({ deck }) {
   // When the user clicks the "Delete" button, the warning message below is shown.
@@ -14,13 +15,13 @@ function DeleteDeckButton({ deck }) {
   };
 
   return (
-    <button type="button" className="btn btn-danger" onClick={handleTrashClick}>
+    <div type="button" className="nav-button btn btn-danger" onClick={handleTrashClick}>
       {/* Using the anchor element to trigger the home page to refresh after deleting 
       the deck. This causes the deleted deck to no longer be displayed on the Home screen */}
       <a href="/" className="text-white">
         <span className="oi oi-trash" />
       </a>
-    </button>
+    </div>
   );
 }
 
